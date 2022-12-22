@@ -1,0 +1,7 @@
+{
+    "/api": {
+        "target": "https://api-coding-challenge.neofinancial.com",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
