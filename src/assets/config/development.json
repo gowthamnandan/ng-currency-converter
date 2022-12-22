@@ -1,0 +1,7 @@
+{
+    "debugging": true,
+    "API_ENDPOINTS": {
+        "baseUrl": "https://api-coding-challenge.neofinancial.com/",
+        "getCurrencyConversion": "currency-conversion?seed=37660"
+    }
+  }

@@ -1,0 +1,48 @@
+<div class="text-center pt-5">
+  <img src="./../assets/images/logo.png" alt="network-logo" width="72" height="72" />
+  <h2 [innerHtml]="appTitle
+  "></h2>
+    <!-- Start Card -->
+<div class="card">
+  <!-- Start Card Body -->
+  <div class="card-body">
+  <form #conversionForm="ngForm" name="conversionForm" (ngSubmit)="onSubmit(conversionForm)" autocomplete="off">
+    <div class="form-row">
+      <!-- Start Input Name -->
+      <div class="form-group col-md-4">
+        <input type="number" class="form-control" name="fromAmount" ngModel #name="ngModel" placeholder="Enter Currency" value="" required />
+        <small class="form-text text-muted">Please Enter Currency</small>
+      </div>
+      <!-- End Input Name -->
+      
+      <div class="form-group col-md-4">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <select class="form-control mr-1" name="fromCurrency" ngModel #name="ngModel" required>
+          <option *ngFor="let currency of fromCurrency | keyvalue" [ngValue]="currency.key" [selected]="currency.key==='CAD'" [innerHtml]="currency.key"></option>
+        </select>
+      </div>
+      <small class="form-text text-muted">Select Currency</small>
+      </div>
+      <div class="form-group col-md-4">
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <select class="form-control mr-1" name="toCurrency" ngModel #name="ngModel" required>
+          <option *ngFor="let currency of desiredCurrency | keyvalue" [ngValue]="currency.key" [innerHtml]="currency.key"></option>
+            
+          </select>
+      </div>
+      <small class="form-text text-muted">Desired Currency</small>
+    </div>
+  </div>
+  <div class="text-center padding-all">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+    </form>
+    <div class="text-center padding-all" *ngIf="bestConversionRate.value > 0">
+      <h5>The Conversion path is {{bestConversionRate.path.join('|')}} and rate is {{bestConversionRate.value}}</h5>
+      <button class="btn btn-primary" (click)="downloadResults()"><i class="fa fa-download"></i> Download in CSV</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
