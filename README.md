@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Initial screen
+![image](https://user-images.githubusercontent.com/5044457/209195305-327cf327-ed4f-4df0-b50e-208ee98aef17.png)
+After retrieval data and currency conversion
+![image](https://user-images.githubusercontent.com/5044457/209195537-f5674838-8d41-457e-80bc-c67ad102b494.png)
+Results in CSV file
+![image](https://user-images.githubusercontent.com/5044457/209195703-4ac2f500-d4b1-4681-86a9-c1db2b91b713.png)
+
